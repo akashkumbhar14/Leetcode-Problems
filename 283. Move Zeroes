@@ -1,0 +1,24 @@
+//Easy problem
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int size=nums.size();
+        int i=0;//i belongs to non zeroes
+        int j=0;//j belongs to zero
+        for( ; i<size ; i++)
+        {
+            if(nums[j]==0 && nums[i]!=0)//Swap if the nums[j]  is a zero and nums[i] is non-zero.
+            {
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                j++;
+            }
+            if(nums[j]!=0) // Inctement the j until nums[i] not contains a zero.
+            {
+                j++;
+            }
+            
+        }
+    }
+};
